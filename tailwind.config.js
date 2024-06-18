@@ -2,6 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -11,7 +13,9 @@ module.exports = {
         customColor_white: '#FFFFFF',
       },
       height: {
+        'custom-30': '30vh',
         'custom-40': '40vh',
+        'custom-45': '45vh',
         'custom-50': '50vh',
         'custom-60': '60vh',
         'custom-70': '70vh',
