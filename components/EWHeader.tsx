@@ -96,7 +96,7 @@ const EWHeader: React.FC = () => {
                                 Events
                             </a>
                             <a href="/joined" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
-                                Joined
+                                Joined-Events
                             </a>
                             </div>
                         )}
