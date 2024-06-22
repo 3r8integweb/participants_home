@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useState } from 'react';
 import EWHeader from '../../../components/EWHeader';
 import EWFooter from '../../../components/EWFooter';
 
@@ -36,7 +36,8 @@ const services: Service[] = [
 const ServicePage: React.FC = () => {
   return (
     <div>
-      <EWHeader />
+      <EWHeader/>
+
       {/* Content Section */}
       <section className="p-12 bg-bg-customColor_black my-5 flex items-center justify-center text-center">
         <div className="container mx-auto">
@@ -68,7 +69,8 @@ const ServicePage: React.FC = () => {
           ))}
         </div>
       </section>
-      <EWFooter />
+
+      <EWFooter/>
     </div>
   );
 }

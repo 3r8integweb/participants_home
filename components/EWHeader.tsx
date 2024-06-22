@@ -5,15 +5,24 @@ import React, { useState } from 'react';
 const EWHeader: React.FC = () => {
     const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
     const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+    const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
     
     const toggleEventsDropdown = () => {
         setIsEventsDropdownOpen(!isEventsDropdownOpen);
         setIsProfileDropdownOpen(false); // Ensure the profile dropdown is closed
+        setIsServicesDropdownOpen(false); // Ensure the services dropdown is closed
     };
     
     const toggleProfileDropdown = () => {
         setIsProfileDropdownOpen(!isProfileDropdownOpen);
         setIsEventsDropdownOpen(false); // Ensure the events dropdown is closed
+        setIsServicesDropdownOpen(false); // Ensure the services dropdown is closed
+    };
+
+    const toggleServicesDropdown = () => {
+        setIsServicesDropdownOpen(!isServicesDropdownOpen);
+        setIsEventsDropdownOpen(false); // Ensure the events dropdown is closed
+        setIsProfileDropdownOpen(false); // Ensure the profile dropdown is closed
     };
 
     return (
@@ -70,7 +79,7 @@ const EWHeader: React.FC = () => {
 
                     <div className="hidden sm:ml-6 sm:block">
                     <div className="flex space-x-4">
-                        <a href="/" className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                        <a href="/home" className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
                         
                         <div className="relative">
                         <button
@@ -96,20 +105,46 @@ const EWHeader: React.FC = () => {
                                 Events
                             </a>
                             <a href="/joined" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
-                                Joined-Events
+                                Joined
                             </a>
                             </div>
                         )}
                         </div>
 
                         <a href="/about" className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                        <a href="/services" className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                        
+                        <div className="relative">
+                        <button
+                            type="button"
+                            className="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                            onClick={toggleServicesDropdown}
+                        >
+                            Services
+                        </button>
+
+                        {isServicesDropdownOpen && (
+                            <div
+                            className="absolute z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            role="menu"
+                            aria-orientation="vertical"
+                            aria-labelledby="user-menu-button"
+                            tabIndex={-1}
+                            >
+                            <a href="/services" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
+                                Services
+                            </a>
+                            <a href="/booking" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
+                                Book
+                            </a>
+                            </div>
+                        )}
+                        </div>
                     </div>
                     </div>
                 </div>
 
                 <div className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 sm:static sm:pr-0">
-                    <a href='/notifications'>
+                    <a href='/notification'>
                     <button type="button" className="relative rounded-full bg-customColor_yellow p-1 text-black-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="absolute -inset-1.5"></span>
                         <span className="sr-only">View notifications</span>
@@ -150,7 +185,7 @@ const EWHeader: React.FC = () => {
                         aria-labelledby="user-menu-button"
                         tabIndex={-1}
                         >
-                        <a href="#" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
+                        <a href="/profile" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
                             Profile
                         </a>
                         <a href="#" className="block px-4 py-2 text-base text-gray-700" role="menuitem" tabIndex={-1}>
@@ -168,7 +203,7 @@ const EWHeader: React.FC = () => {
             {/* Mobile Menu, show/hide based on menu open state */}
             <div className="sm:hidden" id="mobile-menu">
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                <a href="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
                     Home
                 </a>
                 <a href="/events" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">

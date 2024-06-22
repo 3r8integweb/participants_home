@@ -52,6 +52,7 @@ const JoinedPage: React.FC = () => {
   return (
     <div>
       <EWHeader />
+
       <section className="p-12 bg-[var(--background-color)] my-5 flex items-center justify-center text-center">
         <div className="bg-black text-white p-8">
           <h1 className="text-4xl text-yellow-400 mb-4 text-left font-bold">JOINED EVENTS</h1>
@@ -83,6 +84,7 @@ const JoinedPage: React.FC = () => {
           <Modal show={showModal} onClose={() => setShowModal(false)} onConfirm={handleConfirmDelete} />
         </div>
       </section>
+      
       <EWFooter />
     </div>
   );
