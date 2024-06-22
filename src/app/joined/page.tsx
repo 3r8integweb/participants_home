@@ -73,9 +73,11 @@ const JoinedPage: React.FC = () => {
                     >
                       DELETE/LEAVE
                     </button>
+                    <a href='/event_feedback'>
                     <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50 text-sm">
                       FEEDBACK
                     </button>
+                    </a>
                   </div>
                 </div>
               </div>

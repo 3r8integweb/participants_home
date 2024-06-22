@@ -1,0 +1,37 @@
+.eventList {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.eventItem {
+    padding: 1rem;
+    background-color: #fffde7;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.eventTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.eventLocation {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.reminderButton {
+    padding: 0.5rem 1rem;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}

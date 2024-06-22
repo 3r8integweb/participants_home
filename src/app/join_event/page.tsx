@@ -15,12 +15,12 @@ const Events: React.FC = () => {
         {/* Event Details */}
         <div className="bg-black min-h-screen">        
         <div className="flex justify-center gap-5 mt-4">
-            <a href='#'>
+            <a href='/joined'>
             <button className="text-white p-3 bg-yellow-400 rounded-lg">
             Join Event
             </button>
             </a>
-            <a href='#'>
+            <a href='/invite_link'>
             <button className="text-white p-3 bg-yellow-400 rounded-lg">
             Copy Event Link
             </button>
