@@ -1,0 +1,21 @@
+.calendar {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-around;
+}
+
+.date {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

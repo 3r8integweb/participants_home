@@ -66,7 +66,7 @@ const EventPage: React.FC = () => {
       {/* Cards */}
       <div className="flex-1 flex bg-customColor_black h-full items-center justify-center">
         <div className='grid grid-cols-3 gap-4 mx-auto w-full max-w-screen-lg p-4 py-6 lg:py-8'>
-          <div><a href='#'><CardSlider cards={[{ title: 'Sinulog Festival', description: 'Description for this event 1', image: '/images/festival_sinulog.jpg' },]}/></a></div>
+          <div><a href='/join_event'><CardSlider cards={[{ title: 'Sinulog Festival', description: 'Description for this event 1', image: '/images/festival_sinulog.jpg' },]}/></a></div>
           <div><a href='#'><CardSlider cards={[{ title: 'Ati-Atihan Festival', description: 'Description for this event 2', image: '/images/festival_atiatihan.jpg' },]}/></a></div>
           <div><a href='#'><CardSlider cards={[{ title: 'Kaamulan Festival', description: 'Description for this event 3', image: '/images/festival_kaamulan.jpg' },]}/></a></div>
           <div><a href='#'><CardSlider cards={[{ title: 'Panagbenga Festival', description: 'Description for this event 4', image: '/images/festival_panagbenga.jpg' },]}/></a></div>
