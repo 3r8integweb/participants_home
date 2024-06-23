@@ -9,7 +9,7 @@ import EWFooter from '../../../components/EWFooter';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import '../styles/swiper.css';
+import '../../styles/swiper.css';
 
 const HomeLand: React.FC = () => {
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
